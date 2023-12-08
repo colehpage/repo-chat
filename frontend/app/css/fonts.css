@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack/Hack-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack/Italic.ttf') format('ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack/Hack-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack/Hack-BoldItalic.ttf') format('ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('/fonts/Sen/Sen-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('/fonts/Sen/Sen-ExtraBold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sen';
+    src: url('/fonts/Sen/Sen-Bold.ttf') format('ttf');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* IBM Plex Mono Thin */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-Thin.ttf') format('ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-ThinItalic.ttf') format('ttf');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* IBM Plex Mono ExtraLight */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-ExtraLight.ttf') format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-ExtraLightItalic.ttf') format('ttf');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* IBM Plex Mono Light */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-LightItalic.ttf') format('ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* IBM Plex Mono Regular */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-RegularItalic.ttf') format('ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* IBM Plex Mono Medium */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-MediumItalic.ttf') format('ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* IBM Plex Mono SemiBold */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-SemiBold.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-SemiBoldItalic.ttf') format('ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* IBM Plex Mono Bold */
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('/fonts/IBM_Plex_Mono/IMBPlexMono-BoldItalic.ttf') format('ttf');
+    font-weight: 700;
+    font-style: italic;
+}

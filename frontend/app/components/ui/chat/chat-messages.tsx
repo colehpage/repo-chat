@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import ChatItem from "./chat-item";
-
 export interface Message {
   id: string;
   content: string;
@@ -34,9 +33,26 @@ export default function ChatMessages({
   }, [messages.length]);
 
   return (
-    <div className="w-full max-w-5xl p-4 bg-white rounded-xl shadow-xl">
+    <div
+      style={{
+        width: "100%",
+        backgroundColor: "rgba(0,0,0,0.7)",
+      }}
+    >
       <div
-        className="flex flex-col gap-5 divide-y h-[50vh] overflow-auto"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          height: "auto",
+          overflow: "auto",
+          border: "1px solid var(--c-grey)",
+          minHeight: "500px",
+          maxHeight: "500px",
+          width: "100%",
+          padding: "1rem",
+        }}
         ref={scrollableChatContainerRef}
       >
         {messages.map((m: Message) => (

@@ -2,26 +2,90 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-      <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-        Get started by editing&nbsp;
-        <code className="font-mono font-bold">app/page.tsx</code>
-      </p>
-      <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-        <a
-          href="https://www.llamaindex.ai/"
-          className="flex items-center justify-center font-nunito text-lg font-bold gap-2"
+    <div
+      style={{
+        display: "flex",
+        width: "100%",
+        height: "auto",
+        gap: "1rem",
+        maxWidth: "1200px",
+        marginBottom: "1rem",
+        userSelect: "none",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          fontWeight: "bold",
+          color: "var(--c-white)",
+          width: "100%",
+          gap: ".5rem",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            gap: "1rem",
+          }}
         >
-          <span>Built by LlamaIndex</span>
-          <Image
-            className="rounded-xl"
-            src="/llama.png"
-            alt="Llama Logo"
-            width={40}
-            height={40}
-            priority
-          />
-        </a>
+          <div
+            style={{
+              display: "flex",
+              height: "2rem",
+              width: "2rem",
+              flexShrink: 0,
+              userSelect: "none",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: "25%",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              border: "1px solid var(--c-grey)",
+              color: "var(--c-white)",
+            }}
+          >
+            <svg
+              fill="#000000"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  fill-rule="evenodd"
+                  fill="currentColor"
+                  d="M12 21a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm-3.25-1.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zm-3-12.75a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM18.25 6.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM15 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  fill="currentColor"
+                  d="M6.5 7.75v1A2.25 2.25 0 008.75 11h6.5a2.25 2.25 0 002.25-2.25v-1H19v1a3.75 3.75 0 01-3.75 3.75h-6.5A3.75 3.75 0 015 8.75v-1h1.5z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  fill="currentColor"
+                  d="M11.25 16.25v-5h1.5v5h-1.5z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <h3>Repo Chatbot</h3>
+        </div>
+        <p
+          style={{
+            fontSize: "1rem",
+            lineHeight: "1.2rem",
+            fontWeight: "normal",
+          }}
+        >
+          Talk to your Repo!
+        </p>
       </div>
     </div>
   );

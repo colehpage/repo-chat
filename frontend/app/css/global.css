@@ -1,0 +1,515 @@
+/* Palette */
+body {
+    --c-black: rgb(26, 26, 26);
+    --c-black-rgba: 26, 26, 26;
+    --c-white: rgb(225, 225, 225);
+    --c-white-rgba: 225, 225, 225;
+    --c-grey: rgb(137, 137, 137);
+    --c-grey-rgba: 137, 137, 137;
+    --c-purple: rgb(180, 98, 255);
+    --c-purple-rgba: 180, 98, 255;
+    --c-fuchsia: rgb(255, 69, 180);
+    --c-fuchsia-rgba: 255, 69, 180;
+    --c-blue: rgb(24, 182, 255);
+    --c-blue-rgba: 24, 182, 255;
+    --c-green: rgb(27, 235, 158);
+    --c-green-rgba: 27, 235, 158;
+    --c-orange: rgb(255, 149, 40);
+    --c-orange-rgba: 255, 149, 40;
+    --c-yellow: rgb(221, 221, 37);
+    --c-yellow-rgba: 221, 221, 37;
+    --c-sanfrancisco: rgb(170, 0, 0);
+    --c-sanfrancisco-rgba: 170, 0, 0;
+    --c-philadelphia: rgb(0, 76, 84);
+    --c-philadelphia-rgba: 0, 76, 84;
+    --line: 2.5ch;
+    --font: 'Hack', monospace;
+}
+
+body.greyscale {
+    --c-black: rgb(245, 245, 245);
+    --c-black-rgba: 245, 245, 245;
+    --c-white: rgb(26, 26, 26);
+    --c-white-rgba: 26, 26, 26;
+    --c-grey: rgb(137, 137, 137);
+    --c-grey-rgba: 137, 137, 137;
+    --c-purple: rgb(26, 26, 26);
+    --c-purple-rgba: 26, 26, 26;
+    --c-fuchsia: rgb(26, 26, 26);
+    --c-fuchsia-rgba: 26, 26, 26;
+    --c-blue: rgb(26, 26, 26);
+    --c-blue-rgba: 26, 26, 26;
+    --c-green: rgb(26, 26, 26);
+    --c-green-rgba: 26, 26, 26;
+    --c-orange: rgb(26, 26, 26);
+    --c-orange-rgba: 26, 26, 26;
+    --c-yellow: rgb(26, 26, 26);
+    --c-yellow-rgba: 26, 26, 26;
+    --line: 2.5ch;
+    --font: 'Hack', monospace;
+}
+
+body.invert {
+    --c-black: rgb(213, 213, 213);
+    --c-black-rgba: 213, 213, 213;
+    --c-white: rgb(42, 40, 48);
+    --c-white-rgba: 42, 40, 48;
+    --c-grey: rgb(126, 126, 126);
+    --c-grey-rgba: 126, 126, 126;
+    --c-purple: rgb(107, 31, 163);
+    --c-purple-rgba: 107, 31, 163;
+    --c-fuchsia: rgb(245, 7, 119);
+    --c-fuchsia-rgba: 245, 7, 119;
+    --c-blue: rgb(11, 140, 255);
+    --c-blue-rgba: 11, 140, 255;
+    --c-green: rgb(0, 167, 108);
+    --c-green-rgba: 0, 167, 108;
+    --c-orange: rgb(221, 114, 0);
+    --c-orange-rgba: 221, 114, 0;
+    --c-yellow: rgb(148, 151, 0);
+    --c-yellow-rgba: 148, 151, 0;
+}
+
+.black {
+    color: var(--c-black);
+    --c-current: var(--c-black);
+}
+
+.white {
+    color: var(--c-white);
+    --c-current: var(--c-white);
+}
+
+.grey {
+    color: var(--c-grey);
+    --c-current: var(--c-grey);
+}
+
+.purple {
+    color: var(--c-purple);
+    --c-current: var(--c-purple);
+}
+
+.fuchsia {
+    color: var(--c-fuchsia);
+    --c-current: var(--c-fuchsia);
+}
+
+.blue {
+    color: var(--c-blue);
+    --c-current: var(--c-blue);
+}
+
+.green {
+    color: var(--c-green);
+    --c-current: var(--c-green);
+}
+
+.orange {
+    color: var(--c-orange);
+    --c-current: var(--c-orange);
+}
+
+.yellow {
+    color: var(--c-yellow);
+    --c-current: var(--c-yellow);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-2);
+    border-radius: 11px;
+}
+
+::selection {
+    color: var(--bg);
+    background: var(--text-1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px var(--text-3);
+}
+
+/* Type */
+a {
+    color: var(--c-current);
+    text-decoration: none;
+}
+
+a:hover,
+.selected,
+.hover:hover {
+    color: var(--c-black);
+    background: var(--c-white);
+    box-shadow: 0.4ch 0 0 0 var(--c-white), -0.3ch 0 0 0 var(--c-white),
+        0.4ch 0.2ch 0 0 var(--c-white), -0.3ch 0.2ch 0 0 var(--c-white);
+    opacity: 0.8;
+}
+
+@media (min-width: 1024px) {
+    .large {
+        font-size: 4vw;
+        line-height: 1.11111111em;
+        font-weight: 200;
+    }
+}
+
+.italic {
+    font-style: italic;
+}
+
+.columns {
+    width: 100%;
+    column-count: 2;
+    column-gap: 1ch;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.break-anywhere {
+    line-break: anywhere;
+}
+
+/* Reset */
+html,
+body {
+    margin: 0;
+    background: var(--c-black);
+    color: var(--c-white);
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: var(--line);
+    letter-spacing: 0.01em;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 3.97vw;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.11111111vw;
+    }
+}
+
+::selection {
+    color: #000000;
+    background: var(--c-grey);
+}
+
+button {
+    display: inline;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Layout */
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.indent {
+    margin-left: 2ch;
+}
+
+.pad {
+    padding: var(--line);
+}
+
+.px {
+    padding-left: var(--line);
+    padding-right: var(--line);
+}
+
+.py {
+    padding-top: var(--line);
+    padding-bottom: var(--line);
+}
+
+.pt {
+    padding-top: var(--line);
+}
+
+.pr {
+    padding-right: var(--line);
+}
+
+.pb {
+    padding-bottom: var(--line);
+}
+
+.pl {
+    padding-left: var(--line);
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.h-min-screen {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.full {
+    width: 100%;
+}
+
+.half {
+    width: 50%;
+}
+
+.third {
+    width: 33.33%;
+}
+
+.left-third {
+    left: 33.33%;
+}
+
+.two-thirds {
+    width: 66.66%;
+}
+
+.quarter {
+    width: 25%;
+}
+
+.three-quarters {
+    width: 75%;
+}
+
+.order-1 {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .md\:full {
+        width: 100%;
+    }
+
+    .md\:half {
+        width: 50%;
+    }
+
+    .md\:third {
+        width: 33.33%;
+    }
+
+    .md\:left-third {
+        left: 33.33%;
+    }
+
+    .md\:two-thirds {
+        width: 66.66%;
+    }
+
+    .md\:quarter {
+        width: 25%;
+    }
+
+    .md\:three-quarters {
+        width: 75%;
+    }
+
+    .md\:order-1 {
+        order: 1;
+    }
+
+    .md\:hidden {
+        display: none;
+    }
+
+    .md\:inline {
+        display: inline;
+    }
+
+    .md\:block {
+        display: block;
+    }
+
+    .md\:flex {
+        display: flex;
+    }
+
+    .md\:py {
+        padding-top: var(--line);
+        padding-bottom: var(--line);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:full {
+        width: 100%;
+    }
+
+    .lg\:half {
+        width: 50%;
+    }
+
+    .lg\:third {
+        width: 33.33%;
+    }
+
+    .lg\:left-third {
+        left: 33.33%;
+    }
+
+    .lg\:two-thirds {
+        width: 66.66%;
+    }
+
+    .lg\:quarter {
+        width: 25%;
+    }
+
+    .lg\:three-quarters {
+        width: 75%;
+    }
+
+    .lg\:order-1 {
+        order: 1;
+    }
+
+    .lg\:screen-v-scroll {
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .lg\:screen-v-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .lg\:inline {
+        display: inline;
+    }
+
+    .lg\:hidden {
+        display: none;
+    }
+
+    .lg\:flex {
+        display: flex;
+    }
+}
+
+.mb {
+    margin-bottom: var(--line);
+}
+
+.y-space {
+    width: 100%;
+    height: 5ch;
+}
+
+/* Stuff */
+.fx {
+    text-shadow: 0 0 1ch currentColor;
+    filter: saturate(0.9) brightness(1) contrast(1.1);
+    background: var(--c-black);
+}
+
+.border-right {
+    border-right: 0.2ch dashed var(--c-grey);
+}
+
+.border-top {
+    border-top: 0.2ch dashed var(--c-grey);
+}
+
+.bloom {
+    filter: blur(0.03vw) saturate(0.8) brightness(1.1) contrast(1.4);
+    background: var(--c-black);
+    text-shadow: 0 0 2ch currentColor;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+body.invert canvas {
+    opacity: 0.05;
+    filter: none;
+    mix-blend-mode: normal;
+}

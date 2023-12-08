@@ -16,7 +16,18 @@ export default function ChatSection() {
   } = useChat({ api: process.env.NEXT_PUBLIC_CHAT_API });
 
   return (
-    <div className="space-y-4 max-w-5xl w-full">
+    <div
+      style={{
+        display: "flex",
+        gap: "1rem",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "auto",
+        width: "100%",
+        maxWidth: "1200px",
+      }}
+    >
       <ChatMessages
         messages={messages}
         isLoading={isLoading}
@@ -28,7 +39,7 @@ export default function ChatSection() {
         handleSubmit={handleSubmit}
         handleInputChange={handleInputChange}
         isLoading={isLoading}
-        multiModal={MODEL === "gpt-4-vision-preview"}
+        multiModal={MODEL === "gpt-3.5-turbo"}
       />
     </div>
   );

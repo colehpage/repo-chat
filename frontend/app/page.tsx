@@ -3,7 +3,18 @@ import ChatSection from "./components/chat-section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-10 p-24 background-gradient">
+    <main
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        width: "100vw",
+        padding: "1rem",
+        backgroundColor: "var(--c-black)",
+      }}
+    >
       <Header />
       <ChatSection />
     </main>
