@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Message } from "./chat-messages";
 
 export default function ChatAvatar(message: Message) {
@@ -58,8 +57,8 @@ export default function ChatAvatar(message: Message) {
               fill="currentColor"
             ></path>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M20 5C21.6569 5 23 6.34315 23 8V16C23 17.6569 21.6569 19 20 19H4C2.34315 19 1 17.6569 1 16V8C1 6.34315 2.34315 5 4 5H20ZM20 7C20.5523 7 21 7.44772 21 8V16C21 16.5523 20.5523 17 20 17H4C3.44772 17 3 16.5523 3 16V8C3 7.44772 3.44772 7 4 7H20Z"
               fill="currentColor"
             ></path>
@@ -94,17 +93,17 @@ export default function ChatAvatar(message: Message) {
       >
         <g>
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             fill="currentColor"
             d="M12 21a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zm-3.25-1.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zm-3-12.75a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM2.5 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0zM18.25 6.5a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM15 4.75a3.25 3.25 0 106.5 0 3.25 3.25 0 00-6.5 0z"
           ></path>
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             fill="currentColor"
             d="M6.5 7.75v1A2.25 2.25 0 008.75 11h6.5a2.25 2.25 0 002.25-2.25v-1H19v1a3.75 3.75 0 01-3.75 3.75h-6.5A3.75 3.75 0 015 8.75v-1h1.5z"
           ></path>
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             fill="currentColor"
             d="M11.25 16.25v-5h1.5v5h-1.5z"
           ></path>

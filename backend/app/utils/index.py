@@ -59,7 +59,7 @@ CHROMADB_DIR = "./storage/vector_storage/chromadb/" # directory to cache the gen
 
 REPO_DEFAULTS = {
     'owner': "colehpage",
-    'repo': "llm_test",
+    'repo': "hyperdx",
     'filter_directories': None,
     'filter_file_extensions': None,
     'commit_sha': None

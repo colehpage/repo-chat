@@ -1,10 +1,20 @@
 "use client";
 
+import { marked } from "marked";
 import ChatAvatar from "./chat-avatar";
 import { Message } from "./chat-messages";
 
+interface MarkdownRendererProps {
+  content: string;
+}
+
+const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
+  const parsedContent = marked.parse(content);
+
+  return <div dangerouslySetInnerHTML={{ __html: parsedContent }}></div>;
+};
+
 export default function ChatItem(message: Message) {
-  console.log(message);
   return (
     <div
       style={{
@@ -36,11 +46,11 @@ export default function ChatItem(message: Message) {
           fontWeight: message.role === "assistant" ? "normal" : "bold",
           color:
             message.role === "assistant"
-              ? "var(--c-fuchsia)"
+              ? "var(--c-neon-orange)"
               : "var(--c-white)",
         }}
       >
-        {message.content}
+        <MarkdownRenderer content={message.content} />
       </p>
     </div>
   );

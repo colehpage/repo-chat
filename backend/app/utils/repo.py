@@ -150,15 +150,18 @@ def pull_docs_from_github(github_client, repo, pickle_filename, pickle_docs_dir,
         github_client,
         owner=repo.owner,
         repo=repo.repo,
+        use_parser=False,
         filter_directories=repo.filter_directories,
         filter_file_extensions=repo.filter_file_extensions,
         verbose=debug,
         concurrent_requests=10,
     )
+    
+    print(repo)
 
     # Load the docs from the commit sha if requested, otherwise load from main
     # if repo.commit_sha:
-    #     docs = loader.load_data(commit_sha=repo.commit_sha)
+    #     docs = loader.load_data(commit=repo.commit_sha)
     # else:
     docs = loader.load_data(branch="main")
 

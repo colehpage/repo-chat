@@ -24,6 +24,7 @@ body {
     --c-philadelphia-rgba: 0, 76, 84;
     --line: 2.5ch;
     --font: 'Hack', monospace;
+    --c-neon-orange: rgb(255, 98, 36);
 }
 
 body.greyscale {

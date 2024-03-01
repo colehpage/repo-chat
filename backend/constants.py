@@ -37,7 +37,7 @@ LLM_PREDICTOR = LLMPredictor(
 
 REPO_DEFAULTS = {
     'owner': "colehpage",
-    'repo': "github_chatbot",
+    'repo': "gostow",
     'filter_directories': None,
     'filter_file_extensions': None,
     'commit_sha': None

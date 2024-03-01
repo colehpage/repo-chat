@@ -15,6 +15,8 @@ export default function ChatSection() {
     stop,
   } = useChat({ api: process.env.NEXT_PUBLIC_CHAT_API });
 
+  console.log(isLoading, messages);
+
   return (
     <div
       style={{
